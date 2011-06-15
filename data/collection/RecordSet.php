@@ -337,6 +337,9 @@ class RecordSet extends \lithium\data\Collection {
 					continue;
 				}
 
+				if (!isset($relMap[$name])) {
+					continue;
+				}
 				if ($relMap[$name]['type'] != 'hasMany') {
 					$dataMap[$name] = $record;
 					continue;
